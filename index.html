@@ -18,31 +18,28 @@
                     <ul class="left flex">
                         <li class="hamburger">
                             <i class="fas fa-bars"></i>
-                            <!-- <span class="iconify" data-icon="codicon:three-bars" data-inline="false"></span> -->
                         </li>
                         <li class="search">
                             <input type="text" class="search-input" placeholder="Enter keywords..">
-                            <span class="iconify" id="magnifier" data-icon="simple-line-icons:magnifier" data-inline="false"></span>
+                            <span class="icon-search">
+                                <i class="fas fa-search" id="magnifier"></i>
+                            </span>
                         </li>
                     </ul>           
 
                     <ul class="right flex">                        
-                        <li class="icons">
-                            <span class="iconify" data-icon="cil:envelope-open" data-inline="false"></span>
+                        <li class="icons notification">
+                            <span class="iconify" data-icon="clarity:envelope-line" data-inline="false"></span>
+                            <span class="notification-alert"></span>
                         </li>  
 
-                        <li class="icons notification">
-                            <span class="iconify" data-icon="clarity:notification-outline-badged" data-inline="false"></span>
-                            <span class="notification-alert">10</span>
-                        </li>
                         <li class="icons">
-                            <span class="iconify" data-icon="twemoji:flag-for-flag-united-kingdom" data-inline="false"></span>
+                            <span class="iconify" data-icon="clarity:notification-line" data-inline="false"></span>
                         </li>
 
                         <li class="profile">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7GYmGBL2RNmHe8PpM5w5y5H-j076q9_sZeg&usqp=CAU" alt="Profile photo of an African American Female" class="profile-img">
-                            <!-- <p class="inline" style="writing-mode: vertical-lr; color: #fff; font-size: 20px; margin-left: 10px;">...</p> -->
-                        </li>   
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7GYmGBL2RNmHe8PpM5w5y5H-j076q9_sZeg&usqp=CAU" alt="Profile photo" class="profile-img">
+                        </li> 
                     </ul>
                 </nav>
             </div>
@@ -54,8 +51,8 @@
                 <div class="container flex">
                     <div class="card flex" id="card-1">
                         <div class="card-header">
-                            <p class="card-number">2050</p>
-                            <p class="card-text">Total Orders</p>
+                            <p class="card-number">4009</p>
+                            <p class="card-text">New Orders</p>
                         </div>
                         <div class="card-img">
                             <span class="iconify" data-icon="simple-line-icons:basket-loaded" data-inline="false"></span>
@@ -64,7 +61,7 @@
 
                     <div class="card flex" id="card-2">
                         <div class="card-header">
-                            <p class="card-number">3250</p>
+                            <p class="card-number">$3250</p>
                             <p class="card-text">Total Expenses</p>
                         </div>
                         <div class="card-img">
@@ -74,7 +71,7 @@
 
                     <div class="card flex" id="card-3">
                         <div class="card-header">
-                            <p class="card-number">87.5%</p>
+                            <p class="card-number">88.5%</p>
                             <p class="card-text">Total Revenue</p>
                         </div>
                         <div class="card-img">
@@ -83,9 +80,10 @@
                     </div>
 
                     <div class="card flex" id="card-4">
+                        
                         <div class="card-header">
-                            <p class="card-number">2550</p>
-                            <p class="card-text">New Users</p>
+                            <p class="card-number">1575</p>
+                            <p class="card-text">New Profiles</p>
                         </div>
                         <div class="card-img">
                             <span class="iconify" data-icon="clarity:user-line" data-inline="false"></span>
@@ -96,22 +94,236 @@
 
             <section class="chart">
                 <div class="container flex">
-                <div class="line-wrapper">
+                    <div class="line-wrapper">
+                        <div class="header-top flex">
+                            <span class="title">Product Sales</span>
+                            <span class="dots">...</span>
+                        </div>
+                        <canvas id="waveChart"></canvas>
+                    </div>
+
+                    <div class="line-wrapper">
+                        <div class="header-top flex">
+                            <span class="title">Customers Acquisition</span>
+                            <span class="dots">...</span>
+                        </div>
+                        <canvas id="lineChart"></canvas>
+                    </div>                  
+                </div>
+            </section>
+
+            <section class="status">
+                <div class="container">
+                    
+                <div class="earning-card">
+
                     <div class="header-top flex">
-                        <span>Product Sales</span>
+                        <span class="title">Pending Orders</span>
                         <span class="dots">...</span>
                     </div>
-                    <canvas id="lineChart"></canvas>
+
+                        <div class="earning-table">
+                            <table>
+                                <thead class="dark">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Order ID</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead> 
+                                <tbody>   
+                                    <tr>
+                                        <td class="item-date">2021-01-12</td>   
+                                        <td class="item-id">10001</td>   
+                                        <td class="item-name">Earphone GL</td>   
+                                        <td class="item-price">$22.99</td>   
+                                        <td class="item-quantity">9</td>   
+                                        <td class="item-total">206.91</td>   
+                                    </tr>
+                                    <tr>
+                                        <td class="item-date">2021-01-13</td>   
+                                        <td class="item-id">10002</td>   
+                                        <td class="item-name">Camera C430W</td>   
+                                        <td class="item-price">$160.99</td>   
+                                        <td class="item-quantity">3</td>   
+                                        <td class="item-total">462.97</td>   
+                                    </tr>
+                                    <tr>
+                                        <td class="item-date">2021-01-15</td>   
+                                        <td class="item-id">10003</td>   
+                                        <td class="item-name">Iphone X 64Gb</td>   
+                                        <td class="item-price">$999.99</td>   
+                                        <td class="item-quantity">10</td>   
+                                        <td class="item-total">9990.99</td>   
+                                    </tr>
+                                    <tr>
+                                        <td class="item-date">2021-01-30</td>   
+                                        <td class="item-id">10004</td>   
+                                        <td class="item-name">Samsung S8 </td>   
+                                        <td class="item-price">$82.99</td>   
+                                        <td class="item-quantity">10</td>   
+                                        <td class="item-total">9990.99</td>   
+                                    </tr>
+                                    <tr>
+                                        <td class="item-date">2021-02-17</td>   
+                                        <td class="item-id">10005</td>   
+                                        <td class="item-name">PS5</td>   
+                                        <td class="item-price">$1050.99</td>   
+                                        <td class="item-quantity">6</td>   
+                                        <td class="item-total">6,305.94</td>   
+                                    </tr>
+                                    <tr>
+                                        <td class="item-date">2021-02-24</td>   
+                                        <td class="item-id">10006</td>   
+                                        <td class="item-name">Macbook 12 Pro</td>   
+                                        <td class="item-price">$765.99</td>   
+                                        <td class="item-quantity">10</td>   
+                                        <td class="item-total">7650.99</td>   
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    
                 </div>
 
-                <div class="bar-wrapper">
-                    <div class="header-top flex">
-                        <span>Top Selling Categories</span>
-                        <span class="dots">...</span>
+                
+                </div>
+            </section>
+
+            <section class="Pie-chart">
+                <div class="chart pie">
+                    <div class="container flex">
+                        <div class="doughnut-wrapper" >
+                            <div class="header-top flex">
+                                <span class="title">Product Sales</span>
+                                <span class="dots">...</span>
+                            </div>
+                            <canvas id="doughnut-1"></canvas>
+                            <ul class="legend">
+                                <li class="flex legend-blue">
+                                    <p class="legend-name">Leather</p>
+                                    <span>44</span>
+                                </li>
+
+                                <li class="flex legend-green">
+                                    <p class="">Crêpe</p>
+                                    <span>21</span>
+                                </li>
+                                <li class="flex legend-pink">
+                                    <p class="legend-name">Cashmere</p>
+                                    <span>35</span>
+                                </li>                         
+                            </ul>
+                        </div>
+    
+                        <div class="doughnut-wrapper" >
+                            <div class="header-top flex">
+                                <span class="title">Product Sales</span>
+                                <span class="dots">...</span>
+                            </div>
+                            <canvas id="doughnut-2"></canvas>
+                            <ul class="legend">
+                                <li class="flex legend-blue">
+                                    <p class="legend-name">Milk</p>
+                                    <span>67</span>
+                                </li>
+                                <li class="flex legend-green">
+                                    <p class="legend-name">Yoghurt</p>
+                                    <span>23</span>
+                                </li>
+                                <li class="flex legend-pink">
+                                    <p class="legend-name">Cheese</p>
+                                    <span>10</span>
+                                </li>
+                            </ul>
+                        </div> 
+    
+                        <div class="doughnut-wrapper" >
+                            <div class="header-top flex">
+                                <span class="title">Product Sales</span>
+                                <span class="dots">...</span>
+                            </div>
+                            <canvas id="doughnut-3"></canvas>
+                            <ul class="legend">
+                                <li class="flex legend-blue">
+                                    <p class="legend-name">Phone</p>
+                                    <span>50</span>
+                                </li>
+                                <li class="flex legend-green">
+                                    <p class="legend-name">Camera</p>
+                                    <span>20</span>
+                                </li>
+                                <li class="flex legend-pink">
+                                    <p class="legend-name">Watch</p>
+                                    <span>30</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>      
+                </div>
+            </section>
+
+
+            <section class="sales">
+                <div class="container flex">
+                    <div class="bar-wrapper">
+                        <div class="header-top flex">
+                            <span class="title">Top Selling Categories</span>
+                            <span class="dots">...</span>
+                        </div>
+                        <canvas id="barChart"></canvas>
                     </div>
-                    <canvas id="barChart"></canvas>
-                </div>
-                </div>
+
+                    <div class="employee-card">            
+                        <div class="header-top flex">
+                            <span class="title">Top Employees Of The Month</span>
+                            <span class="dots">...</span>
+                        </div>
+                        <div class="employee-table">
+                            <table>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Earnings</th>
+                                    <th class="country">Country</th>
+                                </tr>
+                                <tr>
+                                    <td class="employee-id">1</td>
+                                    <td class="employee-name">Dakota Rice</td>
+                                    <td class="employee-salary">$66,738</td>
+                                    <td class="employee-country">France</td>   
+                                </tr>
+                                <tr>
+                                    <td class="employee-id">2</td>
+                                    <td class="employee-name">Iakovos Papaionnou</td>
+                                    <td class="employee-salary">$49,359</td>
+                                    <td class="employee-country">Greece</td>   
+                                </tr>
+                                <tr>
+                                    <td class="employee-id">3</td>
+                                    <td class="employee-name">Tade Obalalu</td>
+                                    <td class="employee-salary">$35,999</td>
+                                    <td class="employee-country">Nigeria</td>   
+                                </tr>
+                                <tr>
+                                    <td class="employee-id">4</td>
+                                    <td class="employee-name">Chen Yu</td>
+                                    <td class="employee-salary">$34,430</td>
+                                    <td class="employee-country">China</td>   
+                                </tr>
+                                <tr>
+                                    <td class="employee-id">5</td>
+                                    <td class="employee-name">Sofia Sultan</td>
+                                    <td class="employee-salary">$22,430</td>
+                                    <td class="employee-country">U.A.E</td>   
+                                </tr>
+                            </table>
+                        </div>                   
+                    </div>
+                </div>      
             </section>
 
         </main>
@@ -122,8 +334,7 @@
             <div class="container">
             <div class="logo flex">
                 <img src="images/logo.png" alt="">
-                <!-- <i class="fas fa-spinner fa-spin fa-2x"></i> -->
-                <span>BangoDash</span> 
+                <h3 class="logo-name"><span>Bango</span>Dash</h3> 
             </div>
         </section>
         <h3 class="main-nav">Main Navigation</h3>

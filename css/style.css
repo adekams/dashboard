@@ -263,6 +263,7 @@ section {
 .employee-card {
     border-radius: 10px 10px 0 0;
     background: #fff;
+    width: 80%;
 }
 
 table {

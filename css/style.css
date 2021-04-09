@@ -57,6 +57,7 @@ header {
     right: 0;
     width: 100%;
     z-index: 10;
+    transition: .3s ease;
 }
 
 header nav.flex {
@@ -100,7 +101,7 @@ header input {
     outline: none;
     padding: 15px;
     height: 20px;
-    width:180px;
+    width:170px;
     font-size: 1.1rem;
     
 }
@@ -247,6 +248,7 @@ section {
     background: #3a3939;
 }
 
+
 .earning-table th {
     padding: 10px;
     border-bottom: 1px solid rgb(var(--dark));
@@ -293,8 +295,10 @@ table td {
 aside {
     background: rgb(var(--dark));
     color: #9DACB2;
-    display: none;
-    width: 60%;
+    /* display: none;
+    width: 60%; */
+    width: 0;
+    transition: width .3s ease;
     text-align: left;
     position: absolute;
     left: 0;
@@ -302,6 +306,7 @@ aside {
     padding: 60px 0 0;
     height: 100vh;
     overflow-y: scroll;
+    overflow-x: hidden;
     z-index: 5;
 }
 
@@ -330,6 +335,8 @@ aside i {
 aside li {
     padding: 5px 10px;  
     margin: 5px 0 5px 50px;  
+
+    /* transition: .3s; */
 }
 
 aside .logo {
@@ -423,7 +430,7 @@ aside .logo .logo-name {
 }
 
 .active {
-    display: block;
+    width: 250px;
 }
 
 /* Chart */
@@ -520,6 +527,10 @@ ul.legend .legend-pink span {
 
 /* device screens at 500px and above */
 @media (min-width: 500px) {
+    header input {
+        width: 200px;
+    }
+
     ul.right .iconify, ul.right .notification-alert {
         display: flex;
         flex-direction: column;
@@ -527,12 +538,6 @@ ul.legend .legend-pink span {
 
     .profile .inline {
         display: none;
-    }
-
-    aside {
-        min-width: 35%;
-        max-width: 40%;
-        transition: all 1s ease;
     }
 }
 
@@ -559,12 +564,7 @@ ul.legend .legend-pink span {
         padding: 20px;
     }
 
-    aside {
-        min-width: 200px;
-        max-width: 250px;
-    }
-
-    /* sidebar to-to-bottom */
+    /* sidebar to the right */
     .m-left {
         margin-left: 250px;
         transition: all .3s ease;
@@ -573,6 +573,7 @@ ul.legend .legend-pink span {
     .high {
         z-index: 20;
         padding-top: 0;
+        height: 100vh;
     }
 }
 
